@@ -63,11 +63,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'annotate'
-  # gem 'devise'
+  gem 'devise'
   gem 'html2haml'
   gem 'htmlbeautifier'
   gem 'letter_opener_web', '~> 3.0'
-  # gem 'omniauth'
+  gem 'omniauth'
   gem 'pry-byebug'
   gem 'rails_best_practices'
   gem 'rails-flog', require: 'flog'
