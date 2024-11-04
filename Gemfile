@@ -64,6 +64,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'annotate'
   gem 'devise'
+  gem 'dotenv'
   gem 'html2haml'
   gem 'htmlbeautifier'
   gem 'letter_opener_web', '~> 3.0'

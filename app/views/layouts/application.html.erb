@@ -20,7 +20,7 @@
             <ul class="navbar-nav ms-auto">
               <% if user_signed_in? %>
                 <li class="nav-item">
-                  <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
+                  <%= link_to destroy_user_session_path, class: 'nav-link text-light' do %>
                     <i class="fas fa-sign-out-alt"></i> Log out
                   <% end %>
                 </li>
@@ -41,6 +41,16 @@
         </div>
       </nav>
     </header>
+    <% if notice.present? %>
+      <div class="alert alert-success text-center" role="alert" style="margin-bottom: 0";>
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert alert-danger text-center" role="alert" style="margin-bottom: 0";>
+        <%= alert %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
