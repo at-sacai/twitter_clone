@@ -57,6 +57,7 @@ gem 'devise'
 gem 'dotenv'
 gem 'omniauth'
 gem 'rails-i18n'
+gem 'slim-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -70,8 +71,8 @@ group :development do
   gem 'annotate'
   gem 'devise'
   gem 'dotenv'
-  gem "html2slim", github: "slim-template/html2slim"
   gem 'html2haml'
+  gem 'html2slim', github: 'slim-template/html2slim'
   gem 'htmlbeautifier'
   gem 'letter_opener_web', '~> 3.0'
   gem 'omniauth'
