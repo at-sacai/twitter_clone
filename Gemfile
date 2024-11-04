@@ -70,6 +70,7 @@ group :development do
   gem 'annotate'
   gem 'devise'
   gem 'dotenv'
+  gem "html2slim", github: "slim-template/html2slim"
   gem 'html2haml'
   gem 'htmlbeautifier'
   gem 'letter_opener_web', '~> 3.0'
