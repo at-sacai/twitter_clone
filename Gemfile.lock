@@ -5,6 +5,13 @@ GIT
     rubocop-hc (0.1.0)
       rubocop
 
+GIT
+  remote: https://github.com/slim-template/html2slim.git
+  revision: e92e6bb80570dce0c413a6ff01b858754845df24
+  specs:
+    html2slim (0.2.0)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -383,6 +390,7 @@ DEPENDENCIES
   dotenv
   factory_bot_rails
   html2haml
+  html2slim!
   htmlbeautifier
   jbuilder
   jsbundling-rails
