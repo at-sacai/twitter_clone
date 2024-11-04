@@ -96,7 +96,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: 'アプリケーションのドメイン名' }
+  config.action_mailer.default_url_options = { host: 'mighty-temple-67592-a449b8b6f5cb.herokuapp.com' }
 
   config.action_mailer.perform_deliveries = true
 
