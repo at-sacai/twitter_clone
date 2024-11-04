@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title
+      | Myapp
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+  body
+    header
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        .container
+          a.navbar-brand[href="/tweets"]
+            | X Clone
+          button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
+            span.navbar-toggler-icon
+          #navbarNavDropdown.collapse.navbar-collapse
+            ul.navbar-nav.ms-auto
+              - if user_signed_in?
+                li.nav-item
+                  = link_to destroy_user_session_path, class: 'nav-link text-light' do
+                    i.fas.fa-sign-out-alt
+                    |  Log out 
+              - else
+                li.nav-item
+                  = link_to new_user_registration_path, class: 'nav-link text-light' do
+                    i.fas.fa-user-plus
+                    |  Sign up 
+                li.nav-item
+                  = link_to new_user_session_path, class: 'nav-link text-light' do
+                    i.fas.fa-sign-in-alt
+                    |  Log in 
+    - if notice.present?
+      .alert.alert-success.text-center[role="alert" style="margin-bottom: 0"]
+        = notice
+    - if alert.present?
+      .alert.alert-danger.text-center[role="alert" style="margin-bottom: 0"]
+        = alert
+    = yield

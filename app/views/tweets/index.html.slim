@@ -1,0 +1,18 @@
+.container
+  .row
+    .col.border.border-dark
+      h1
+        | X
+      nav.border.border-dark
+        a.d-block[href=""]
+          | Home
+        a.d-block[href=""]
+          | Post
+      .user.mt-3.border.border-dark
+        a.d-block[href=""]
+          = current_user.name
+          |  さん
+    .col-6.text-center.border.border-dark
+      |  center container 
+    .col.text-center.border.border-dark
+      |  right container 
