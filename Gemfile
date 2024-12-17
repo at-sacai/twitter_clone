@@ -53,6 +53,12 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'devise'
+gem 'dotenv'
+gem 'omniauth'
+gem 'rails-i18n'
+gem 'slim-rails'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -62,12 +68,23 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'annotate'
+  gem 'devise'
+  gem 'dotenv'
+  gem 'html2haml'
+  gem 'html2slim', github: 'slim-template/html2slim'
   gem 'htmlbeautifier'
+  gem 'letter_opener_web', '~> 3.0'
+  gem 'omniauth'
+  gem 'pry-byebug'
   gem 'rails_best_practices'
+  gem 'rails-flog', require: 'flog'
+  gem 'rails-i18n'
   gem 'rubocop', require: false
   gem 'rubocop-hc', require: false, github: 'ihatov08/rubocop-hc'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'slim-rails'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
