@@ -56,6 +56,8 @@ gem 'bootsnap', require: false
 gem 'devise'
 gem 'dotenv'
 gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 gem 'rails-i18n'
 gem 'slim-rails'
 
