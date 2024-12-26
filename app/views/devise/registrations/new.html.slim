@@ -35,4 +35,4 @@ section.bg-image[style="background-color: #f5f5f5; min-height: 100vh;"]
                   | Already have an account? 
                   = link_to 'Log in here', new_user_session_path, class: 'fw-bold text-body'
                 button.btn.btn-dark.mt-3
-                  = link_to 'Sign in with GitHub', user_github_omniauth_authorize_path, class: 'text-white text-decoration-none'
+                  = link_to 'Log in with GitHub', user_github_omniauth_authorize_path, class: 'text-white text-decoration-none', method: :post, data: { turbo: false }
