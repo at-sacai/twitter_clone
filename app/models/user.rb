@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :timeoutable, :trackable, :omniauthable, omniauth_providers: %i[github]
   extend Devise::Models
+
   validates :uid, uniqueness: { scope: :provider }, if: -> { uid.present? }
 
   def self.from_omniauth(auth)
@@ -14,8 +15,17 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
       user.name = auth.info.name
-      user.telephone_number = '00000000000'
-      user.date_of_birth = '0000-00-00'
+      user.phone_number = '00000000000'
+      user.birth_date = '0000-00-00'
+
+      if user.persisted? || auth.provider == 'github'
+        user.skip_confirmation! if auth.provider == 'github'
+        user.save
+      end
     end
+  end
+
+  def self.create_unique_string
+    SecureRandom.uuid
   end
 end
